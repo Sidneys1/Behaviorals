@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace Behaviorals {
 
-	public interface IBehavioral<TTrigger, TSubclass> where TTrigger : struct, IConvertible where TSubclass : IBehavioral<TTrigger, TSubclass> {
+	public interface IBehavioral<TSubclass> where TSubclass : IBehavioral<TSubclass> {
 
-		MultiMap<TTrigger, Behaviour<TTrigger, TSubclass>> Behaviours { get; }
+		MultiMap<int, Behaviour<TSubclass>> Behaviours { get; }
 
 		Dictionary<string, object> AttachedProperties { get; }
 
-		void Trigger(TTrigger trigger);
+		void Trigger(int trigger);
 	}
 }
