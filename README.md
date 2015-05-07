@@ -2,7 +2,7 @@
 Allows basic attatched behaviors in C# projects using generics
 
 ```C#
-// First you will need a trigger enum:
+// Triggers are ints, so it can be useful to define some constants:
 public static class TriggerEnum {
   public static readonly int TriggerA = 0;
   public static readonly int TriggerB = 1;
